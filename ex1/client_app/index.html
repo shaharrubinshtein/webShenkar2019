@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>get data page</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+    <body>
+    <input type="button" value="multi with GET" id="multi"><br>
+    <section class="result">Result: </section>
+    <input type="button" value="sum with POST" id="sum"><br>
+    <section class="result">Result: </section>
+    <input type="button" value="avg with PUT" id="avg">
+    <section class="result">Result: </section>
+    <script>
+       $("#multi").click(function() {
+            //GET
+           console.log("get method");
+            $.get("http://shenkar.html5-book.co.il/2018-2019/dcs/dev_44/service_calculator/dcs_1.php/",
+                {'func':'multi','num1':10,'num2':15,'num3':20},
+                function (data) {
+                    $(".result").append(data.retVal+"<br>");
+                    console.log("Return data: " + data.retVal);
+                });
+        });
+
+    $("#sum").click(function() {
+            //    POST:
+        console.log("post method");
+            $.post("http://shenkar.html5-book.co.il/2018-2019/dcs/dev_44/service_calculator/dcs_1.php",
+                {'func':'sum','num1':10,'num2':15,'num3':20},
+                function( data ) {
+                    $(".result").append(data.retVal+"<br>");
+                    console.log( "Return data: " + data.retVal);
+                });
+        });
+
+       $("#avg").click(function(){
+            //PUT or delete etc:
+            var dataObj = {'func':'avg','num1':10,'num2':15,'num3':20};
+            $.ajax({
+                url:"http://shenkar.html5-book.co.il/2018-2019/dcs/dev_44/service_calculator/dcs_1.php",
+                data:dataObj,
+                //dataType:'json',
+                type:'PUT',
+                success:function(data){
+                    $(".result").append(data.retVal+"<br>");
+                    console.log("Return data: " +data.retVal)
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
