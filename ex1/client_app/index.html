@@ -5,10 +5,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>
-    <input type="button" value="multi with GET" id="multi"><br>
-    <section class="result">Result: </section>
-    <input type="button" value="sum with POST" id="sum"><br>
-    <section class="result">Result: </section>
+    <input type="button" value="multi with GET" id="multi">
+    <input type="button" value="sum with POST" id="sum">
     <input type="button" value="avg with PUT" id="avg">
     <section class="result">Result: </section>
     <script>
@@ -16,10 +14,10 @@
             //GET
            console.log("get method");
             $.get("http://shenkar.html5-book.co.il/2018-2019/dcs/dev_44/service_calculator/dcs_1.php/",
-                {'func':'multi','num1':10,'num2':15,'num3':20},
+                {'func':1,'num1':10,'num2':15,'num3':20},
                 function (data) {
-                    $(".result").append(data.retVal+"<br>");
-                    console.log("Return data: " + data.retVal);
+                    $(".result").append(data+"<br>");
+                    console.log("Return data: " + data);
                 });
         });
 
@@ -29,8 +27,8 @@
             $.post("http://shenkar.html5-book.co.il/2018-2019/dcs/dev_44/service_calculator/dcs_1.php",
                 {'func':'sum','num1':10,'num2':15,'num3':20},
                 function( data ) {
-                    $(".result").append(data.retVal+"<br>");
-                    console.log( "Return data: " + data.retVal);
+                    $(".result").append(data+"<br>");
+                    console.log( "Return data: " + data);
                 });
         });
 
@@ -43,8 +41,8 @@
                 //dataType:'json',
                 type:'PUT',
                 success:function(data){
-                    $(".result").append(data.retVal+"<br>");
-                    console.log("Return data: " +data.retVal)
+                    $(".result").append(data+"<br>");
+                    console.log("Return data: " +data)
                 }
             });
         });
