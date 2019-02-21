@@ -119,7 +119,7 @@ class ShowCloseSheltersFirst extends Component {
                         </section>
                 </section>
             </section>
-
+                
               
             <section>
                 {this.getResult()}

@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import GoogleLogin from 'react-google-login';
 import './HomePage.css';
-import Box from './Box';
+
 import ShowCloseSheltersFirst from './ShowCloseSheltersFirst';
 import './ShowCloseSheltersFirst.css';
 import AddShelterFirst from './AddShelterFirst';
 import './AddShelterFirst.css';
-import AddHospitalityFirst from './AddHospitalityFirst';
-import FindHospitalityFirst from './FindHospitalityFirst';
+
 
 
 class HomePage extends Component{
@@ -43,7 +42,6 @@ class HomePage extends Component{
                     id:4,
                     name:'AddHospitality',
                     flag:0
-
                 }
             ],
             token:'null',
@@ -60,8 +58,7 @@ class HomePage extends Component{
         this.google=this.google.bind(this);
         this.loadProfile=this.loadProfile.bind(this);
         this.fromStart=this.fromStart.bind(this);
-        this.AddHospitality=this.AddHospitality.bind(this);
-        this.FindHospitality=this.FindHospitality.bind(this);
+     
        
     
     }
@@ -107,37 +104,12 @@ class HomePage extends Component{
     }
 
 
-    FindHospitality(){
-        this.setState({
-            pages:this.state.pages.map((page)=>{
-                    if(page.name==='FindHospitality'){
-                        return {id:page.id,name:page.name,flag:1}
-                    }else{
-                        return {id:page.id,name:page.name,flag:0}
-                    }
-            })
-
-        })
-
-
-    }
+   
 
 
 
 
-    AddHospitality(){
-        this.setState({
-            pages:this.state.pages.map((page)=>{
-                    if(page.name==='AddHospitality'){
-                        return {id:page.id,name:page.name,flag:1}
-                    }else{
-                        return {id:page.id,name:page.name,flag:0}
-                    }
-            })
-
-        })
-
-    }
+   
 
  
 
@@ -224,42 +196,13 @@ class HomePage extends Component{
             document.getElementById('FindHospitalityBox').style.color="black";
             document.getElementById('AddHospitalityBox').style.color="black";
             return <AddShelterFirst key={i} index={i} onChange={this.update}>{this.state.token}</AddShelterFirst>
-        }else if(item.flag===1 && item.name==='AddHospitality'){
-            document.getElementById('ShowCloseSheltersBox').style.color="black";
-            document.getElementById('AddShelterBox').style.color="black";
-            document.getElementById('FindHospitalityBox').style.color="black";
-            document.getElementById('AddHospitalityBox').style.color="green";
-            return <AddHospitalityFirst key={i} index={i} onChange={this.update}>{this.state.token}</AddHospitalityFirst>
-        }else if(item.flag===1 && item.name==='FindHospitality'){
-            document.getElementById('ShowCloseSheltersBox').style.color="black";
-            document.getElementById('AddShelterBox').style.color="black";
-            document.getElementById('FindHospitalityBox').style.color="green";
-            document.getElementById('AddHospitalityBox').style.color="black";
+       
             
 
 
-            return <AddHospitalityFirst key={i} index={i} onChange={this.update}>{this.state.token}</AddHospitalityFirst>
+       
             
-/*          
-            console.log(this.state.token);
-            const proxy1=`https://cors-anywhere.herokuapp.com/`;
-            const url1=`https://yonit2.herokuapp.com/FindAllLocations`;
-            fetch(`${proxy1}${url1}`,{method: "POST",headers: {'Content-Type': 'application/json'},body: JSON.stringify(shelterData),credentials: "same-origin"} )
-            .then((response)=>{
     
-                return response.json();
-    
-            },(error)=>{
-    
-                alert('error');
-            }).then((res)=>{
-                return (<p>asdasdsdadas</p>);
-    
-            },(error)=>{
-                console.log(error);
-            })
-    
- */        
 
         }
     }
