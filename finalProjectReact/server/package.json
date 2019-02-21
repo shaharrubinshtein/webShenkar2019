@@ -1,0 +1,21 @@
+{
+  "name": "s2",
+  "version": "1.0.0",
+  "description": "shelter nir and shahar",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "google-auth-library": "^3.1.0",
+    "html-to-json": "^0.6.0",
+    "mongoose": "^4.13.18",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
