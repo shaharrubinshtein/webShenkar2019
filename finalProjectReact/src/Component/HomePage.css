@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin:0;
+}
+.buttonBox{
+    width: 100%;
+    height: 50%;
+   
+    text-align: center;
+    
+
+
+}
+
+#logInEmailOut{
+    margin:0 auto;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+#googleLogInBox{
+    float: left;
+    margin-top:3px;
+  
+}
+#all{
+    margin: 0 auto;
+   
+    width: 80%;
+    height: 100px;
+
+}
+
+#topMenuUp{
+    float: left;
+    height: 50px;
+    width: 100%;
+    
+    
+}
+
+#topMenubuttom{
+    float: left;
+    width: 100%;
+   
+  
+    
+    height: 30px;
+   
+}
+
+#logInEmail:hover{
+
+    color:blue;
+
+
+}
+#logInEmail{
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+
+}
+
+.topMenuBoxOutGoogle{
+    height: 100%;
+    width: 25%;
+    float: right; 
+    
+   
+    
+   
+
+}
+
+.topMenuBoxOut{
+    line-height: 30px;
+    height: 100%;
+    width: 25%;
+    float:left; 
+    
+   
+   
+}
+
+#logoBoxOut{
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-left: 15px;
+   
+}
+
+#logoBoxIn{
+    background-image: url("logo.jpg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 149px;
+    height: 30px;
+    float: left;
+    margin-top:9px;
+
+
+
+}
+
+
+#logoOut{
+    width: 149px;
+    height: 30px;
+    
+   
+    margin:0 auto;
+  
+
+}
+
+.topMenuBoxInGoogle{
+    
+    height: 100%;
+    width: 95px;
+    margin:0 auto;
+    
+   
+ 
+
+
+}
+
+.topMenuBoxIn:hover{
+
+    
+    text-decoration: underline;
+}
+
+.topMenuBoxIn{
+    
+    font-size: 13px;
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+
+
+}
+
+
+@media only screen and (max-width:650px){
+
+
+    #topMenuOut{
+
+    
+  
+    
+        height: 150px;
+       
+    }
+
+  
+
+    .topMenuBoxOut{
+        width: 100%;
+        height: 25%;
+
+    }
+
+
+
+    #googleBox{
+        width:100%;
+    }
+
+    
+    #topMenubuttom{
+        height: 140px;
+        
+        float: left;
+
+    }
+
+    #logoBoxOut{
+        width: 50%;
+        
+        margin-left: 0;
+    }
+
+    .topMenuBoxOutGoogle{
+        width: 50%;
+    }
+      
+    .topMenuBoxInGoogle{
+        float: right;
+        
+    }
+}
+
